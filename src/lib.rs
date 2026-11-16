@@ -45,6 +45,10 @@ pub mod testcase;
 pub mod utils;
 pub mod variants;
 
+#[cfg(test)]
+#[path = "../benches/src/support.rs"]
+mod benchmark_support;
+
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 /// Event to call.

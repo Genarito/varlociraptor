@@ -25,6 +25,10 @@ use crate::{
     variants::model::{self, AlleleFreq},
 };
 
+#[cfg(test)]
+#[path = "../../benches/src/contamination.rs"]
+mod benchmarks;
+
 #[derive(Hash, Eq, PartialEq, Clone, Debug)]
 struct Event {
     contamination: AlleleFreq,

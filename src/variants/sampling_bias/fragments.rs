@@ -14,6 +14,10 @@ use crate::utils::NUMERICAL_EPSILON;
 use crate::variants::sampling_bias::SamplingBias;
 use crate::variants::types::Variant;
 
+#[cfg(test)]
+#[path = "../../../benches/src/fragments.rs"]
+mod benchmarks;
+
 pub(crate) trait FragmentSamplingBias: Variant + SamplingBias {
     /// Get range of insert sizes with probability above zero.
     /// We use 6 SDs around the mean.
